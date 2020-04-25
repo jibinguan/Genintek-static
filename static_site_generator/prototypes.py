@@ -7,7 +7,8 @@ BASE_DIR = os.path.dirname(__file__)
 
 
 settings.configure(
-    DEBUG=True,
+    DEBUG=False,
+    ALLOWED_HOSTS=['*'],
     SECRET_KEY='b0mqvak1p2sqm6p#+8o8fyxf+ox(le)8&jh_5^sxa!=7!+wxj0',
     ROOT_URLCONF='sitebuilder.urls',
     MIDDLEWARE_CLASSES=(),
@@ -24,6 +25,7 @@ settings.configure(
         },
     ),
     STATIC_URL='/static/',
+
     SITE_PAGES_DIRECTORY=os.path.join(BASE_DIR, 'pages'),
     SITE_OUTPUT_DIRECTORY=os.path.join(BASE_DIR, '_build'),
     STATIC_ROOT=os.path.join(BASE_DIR, '_build', 'static'),
