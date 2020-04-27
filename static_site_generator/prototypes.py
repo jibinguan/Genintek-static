@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(__file__)
 
 
 settings.configure(
-    DEBUG=False,
+    DEBUG=True,
     ALLOWED_HOSTS=['*'],
     SECRET_KEY='b0mqvak1p2sqm6p#+8o8fyxf+ox(le)8&jh_5^sxa!=7!+wxj0',
     ROOT_URLCONF='sitebuilder.urls',
@@ -36,6 +36,7 @@ settings.configure(
     ),
 )
 
+WSGI_APPLICATION = 'static_site_generator.wsgi.application'
 
 if __name__ == "__main__":
     from django.core.management import execute_from_command_line
